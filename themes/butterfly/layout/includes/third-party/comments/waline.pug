@@ -3,52 +3,31 @@
 
 script.
   (() => {
-    let initFn = window.walineFn || null
-    const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
-    const option = !{JSON.stringify(option)}
-
-    const destroyWaline = ele => ele.destroy()
-
-    const initWaline = (Fn, el = document, path = window.location.pathname) => {
-      const waline = Fn({
-        el: el.querySelector('#waline-wrap'),
+    const initWaline = () => {
+      const waline = Waline.init(Object.assign({
+        el: '#waline-wrap',
         serverURL: '!{serverURL}',
         pageview: !{lazyload ? false : pageview},
         dark: 'html[data-theme="dark"]',
+        path: window.location.pathname,
         comment: !{lazyload ? false : count},
-        ...option,
-        path: isShuoshuo ? path : (option && option.path) || path
-      })
+      }, !{JSON.stringify(option)}))
 
-      if (isShuoshuo) {
-        window.shuoshuoComment.destroyWaline = () => {
-          destroyWaline(waline)
-          if (el.children.length) {
-            el.innerHTML = ''
-            el.classList.add('no-comment')
-          }
-        }
+      const destroyWaline = () => {
+        waline.destroy()
       }
+
+      btf.addGlobalFn('pjax', destroyWaline, 'destroyWaline')
+
     }
 
-    const loadWaline = (el, path) => {
-      if (initFn) initWaline(initFn, el, path)
+    const loadWaline = async () => {
+      if (typeof Waline === 'object') initWaline()
       else {
-        btf.getCSS('!{url_for(theme.asset.waline_css)}')
-          .then(() => import('!{url_for(theme.asset.waline_js)}'))
-          .then(({ init }) => {
-            initFn = init || Waline.init
-            initWaline(initFn, el, path)
-            window.walineFn = initFn
-          })
+        await getCSS('!{url_for(theme.asset.waline_css)}')
+        await getScript('!{url_for(theme.asset.waline_js)}')
+        initWaline()
       }
-    }
-
-    if (isShuoshuo) {
-      '!{use[0]}' === 'Waline'
-        ? window.shuoshuoComment = { loadComment: loadWaline } 
-        : window.loadOtherComment = loadWaline
-      return
     }
 
     if ('!{use[0]}' === 'Waline' || !!{lazyload}) {

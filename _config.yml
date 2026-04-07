@@ -12,7 +12,7 @@ language: zh-CN
 timezone: 'Asia/Shanghai'
 
 # URL
-url: https://laoqin-crypto.github.io
+url: https://geekqin.github.io
 permalink: :title/
 permalink_defaults:
 pretty_urls:
@@ -94,7 +94,7 @@ theme: butterfly
 # Deployment
 deploy:
   type: git
-  repo: https://github.com/laoqin-crypto/laoqin-crypto.github.io.git
+  repo: https://github.com/GeekQin/GeekQin.github.io.git
   branch: main
 
 # Markdown 插件

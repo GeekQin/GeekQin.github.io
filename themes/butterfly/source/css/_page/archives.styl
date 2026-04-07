@@ -69,7 +69,6 @@
 
     &.year
       font-size: 1.43em
-      margin-bottom: 10px
 
       &:hover
         &:before
@@ -79,8 +78,8 @@
         border-color: var(--pseudo-hover)
 
     &-time
-      color: var(--card-meta)
-      font-size: .85em
+      color: $theme-meta-color
+      font-size: 95%
 
       time
         padding-left: 6px
@@ -89,7 +88,7 @@
     &-title
       @extend .limit-more-line
       color: var(--font-color)
-      font-size: 1.05em
+      font-size: 1.1em
       transition: all .3s
       -webkit-line-clamp: 2
 
@@ -99,13 +98,8 @@
 
     &-img
       overflow: hidden
-      width: 100px
-      height: 70px
-      addBorderRadius()
-
-      +maxWidth768()
-        width: 70px
-        height: 70px
+      width: 80px
+      height: 80px
 
       :first-child
         @extend .imgHover

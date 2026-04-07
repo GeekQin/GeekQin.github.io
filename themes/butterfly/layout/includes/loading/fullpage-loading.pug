@@ -14,7 +14,6 @@ script.
     const $body = document.body
     const preloader = {
       endLoading: () => {
-        if ($loadingBox.classList.contains('loaded')) return
         $body.style.overflow = ''
         $loadingBox.classList.add('loaded')
       },
@@ -25,18 +24,10 @@ script.
     }
 
     preloader.initLoading()
-
-    if (document.readyState === 'complete') {
-      preloader.endLoading()
-    } else {
-      window.addEventListener('load', preloader.endLoading)
-      document.addEventListener('DOMContentLoaded', preloader.endLoading)
-      // Add timeout protection: force end after 7 seconds
-      setTimeout(preloader.endLoading, 7000)
-    }
+    window.addEventListener('load',() => { preloader.endLoading() })
 
     if (!{theme.pjax && theme.pjax.enable}) {
-      btf.addGlobalFn('pjaxSend', preloader.initLoading, 'preloader_init')
-      btf.addGlobalFn('pjaxComplete', preloader.endLoading, 'preloader_end')
+      document.addEventListener('pjax:send', () => { preloader.initLoading() })
+      document.addEventListener('pjax:complete', () => { preloader.endLoading() })
     }
   })()

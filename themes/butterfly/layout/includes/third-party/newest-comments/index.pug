@@ -1,11 +1,7 @@
 - let { use } = theme.comments
 
 if use
-  -
-    let forum,apiKey,userRepo
-    let { limit:newestCommentsLimit } = theme.aside.card_newest_comments
-    if (newestCommentsLimit > 10 || newestCommentsLimit < 1) newestCommentsLimit = 6
-
+  - let forum,apiKey,userRepo
   case use[0]
     when 'Valine'
       include ./valine.pug
