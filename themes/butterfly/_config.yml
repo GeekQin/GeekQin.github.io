@@ -1,0 +1,271 @@
+# --------------------------------------
+# Hexo Butterfly Theme Configuration
+# 币圈老秦的博客配置
+# --------------------------------------
+
+# --------------------------------------
+# Navigation Settings
+# --------------------------------------
+
+nav:
+  logo:
+  display_title: true
+  display_post_title: true
+  fixed: false
+
+menu:
+  博客: / || fas fa-home
+  分类: /categories/ || fas fa-folder
+  标签: /tags/ || fas fa-tags
+  留言板: /messageboard/ || fas fa-comment-alt
+
+# --------------------------------------
+# Social media links
+# --------------------------------------
+social:
+  GitHub: https://github.com/laoqin-crypto || fab fa-github || '#24292e'
+  邮箱: mailto:laoqin@crypto.com || fas fa-envelope || '#4a7dbe'
+
+# --------------------------------------
+# Image Settings
+# --------------------------------------
+favicon: /img/favicon.ico
+
+avatar:
+  img: /img/avatar.png
+  effect: true
+
+disable_top_img: false
+default_top_img:
+
+# --------------------------------------
+# Cover Settings
+# --------------------------------------
+cover:
+  index_enable: true
+  aside_enable: true
+  archives_enable: true
+
+# --------------------------------------
+# Post Meta Settings
+# --------------------------------------
+post_meta:
+  page:
+    date_type: created
+    date_format: date
+    categories: true
+    tags: true
+    label: true
+  post:
+    position: left
+    date_type: both
+    date_format: date
+    categories: true
+    tags: true
+    label: true
+
+# --------------------------------------
+# Index page settings
+# --------------------------------------
+index_layout: 3
+index_post_content:
+  method: 3
+  length: 300
+
+# --------------------------------------
+# Post Settings
+# --------------------------------------
+toc:
+  post: true
+  page: false
+  number: true
+
+post_copyright:
+  enable: true
+  decode: false
+  license: CC BY-NC-SA 4.0
+  license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+related_post:
+  enable: true
+  limit: 6
+  date_type: created
+
+post_pagination: 1
+
+# --------------------------------------
+# Footer Settings
+# --------------------------------------
+footer:
+  owner:
+    enable: true
+    since: 2026
+  copyright:
+    enable: true
+    version: true
+  custom_text: '© 2026 币圈老秦. All rights reserved.'
+
+# --------------------------------------
+# Aside Settings
+# --------------------------------------
+aside:
+  enable: true
+  mobile: true
+  position: right
+  display:
+    archive: true
+    tag: true
+    category: true
+
+  card_author:
+    enable: true
+    description: 'Web3自媒体博主 | 资深日内交易员'
+    button:
+      enable: true
+      icon: fab fa-github
+      text: 关注我
+      link: https://github.com/laoqin-crypto
+
+  card_announcement:
+    enable: true
+    content: '欢迎来到币圈老秦的博客！投资有风险，入市需谨慎。'
+
+  card_recent_post:
+    enable: true
+    limit: 5
+
+  card_categories:
+    enable: true
+    limit: 8
+
+  card_tags:
+    enable: true
+    limit: 20
+
+  card_archives:
+    enable: true
+    limit: 12
+
+# --------------------------------------
+# Search
+# --------------------------------------
+search:
+  enable: true
+  path: search.json
+  field: post
+  content: true
+  styled: true
+  template: search
+
+# --------------------------------------
+# Comment
+# --------------------------------------
+comments:
+  enable: true
+  type: valine
+  # Valine 评论配置（可选）
+  valine:
+    appId:
+    appKey:
+    placeholder: 留下你的足迹...
+    avatar: mp
+    meta: nick,link
+    requiredFields: nick
+    visitor: true
+
+# --------------------------------------
+# Analytics
+# --------------------------------------
+google_analytics:
+  enable: false
+  id:
+
+baidu_analytics:
+  enable: false
+  id:
+
+# --------------------------------------
+# Count
+# --------------------------------------
+busuanzi:
+  enable: true
+  site_uv: true
+  site_pv: true
+  page_pv: true
+  post_pv: true
+  post_pv_day: true
+
+# --------------------------------------
+# Lazyload
+# --------------------------------------
+lazyload: true
+
+# --------------------------------------
+# Pjax
+# --------------------------------------
+pjax:
+  enable: true
+
+# --------------------------------------
+# Theme color
+# --------------------------------------
+theme_color:
+  enable: true
+  main: '#49b4f5'
+  link: '#49b4f5'
+  # main: '#007bff'
+  # link: '#007bff'
+
+# --------------------------------------
+# Code Blocks
+# --------------------------------------
+code_blocks:
+  theme: darker
+  macStyle: true
+  copy: true
+  language: true
+
+# --------------------------------------
+# Copy Button
+# --------------------------------------
+copy_btn: true
+
+# --------------------------------------
+# Lightbox
+# --------------------------------------
+lightbox: true
+
+# --------------------------------------
+# Snackbar
+# --------------------------------------
+snackbar:
+  enable: false
+
+# --------------------------------------
+# Tags Settings
+# --------------------------------------
+tag_plugins:
+  note:
+    enable: true
+    icon: fas fa-angle-right
+    layouts:
+      - name: note
+        icon: fa fa-sticky note
+        style: simple
+  button:
+    enable: true
+  tab:
+    enable: true
+  link:
+    enable: true
+  timeline:
+    enable: true
+
+# --------------------------------------
+# Word Count
+# --------------------------------------
+wordcount:
+  enable: true
+  post_wordcount: true
+  min2read: true
+  total_wordcount: true
