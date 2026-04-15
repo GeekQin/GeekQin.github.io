@@ -4,4 +4,6 @@ public/
 .deploy_git/
 .vercel/
 package-lock.json
-themes/butterfly/
+# Butterfly theme: ignore all, but track _config.yml
+themes/butterfly/*
+!themes/butterfly/_config.yml
