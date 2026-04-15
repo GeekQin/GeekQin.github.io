@@ -24,7 +24,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          submodules: recursive
           fetch-depth: 0
 
       - name: Setup Node.js
@@ -36,6 +35,9 @@ jobs:
         run: |
           npm install
           npm install -g hexo-cli
+
+      - name: Link butterfly theme
+        run: ln -s ../node_modules/hexo-theme-butterfly themes/butterfly
 
       - name: Generate static files
         run: hexo generate
