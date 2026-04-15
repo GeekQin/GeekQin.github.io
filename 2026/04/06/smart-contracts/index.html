@@ -1,0 +1,339 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>什么是智能合约？它和传统合约有什么区别？ | 币圈老秦's Blog</title><meta name="author" content="币圈老秦"><meta name="copyright" content="币圈老秦"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="币圈老秦 · 区块链普及系列 第7篇 什么是智能合约？它和传统合约有什么区别？老铁们好！今天咱们来聊聊区块链最重要的应用——智能合约。 如果说区块链是”账本”，那智能合约就是”自动执行的合同”。没有智能合约，DeFi、NFT、DAO这些东西都不会存在。 🔍 什么是智能合约？智能合约（Smart Contract）是存储在区块链上的程序代码。当预设条件触发时，代码自动执行，不需要任何人工干预。 �">
+<meta property="og:type" content="article">
+<meta property="og:title" content="什么是智能合约？它和传统合约有什么区别？">
+<meta property="og:url" content="https://geekqin.github.io/2026/04/06/smart-contracts/index.html">
+<meta property="og:site_name" content="币圈老秦&#39;s Blog">
+<meta property="og:description" content="币圈老秦 · 区块链普及系列 第7篇 什么是智能合约？它和传统合约有什么区别？老铁们好！今天咱们来聊聊区块链最重要的应用——智能合约。 如果说区块链是”账本”，那智能合约就是”自动执行的合同”。没有智能合约，DeFi、NFT、DAO这些东西都不会存在。 🔍 什么是智能合约？智能合约（Smart Contract）是存储在区块链上的程序代码。当预设条件触发时，代码自动执行，不需要任何人工干预。 �">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://geekqin.github.io/img/avatar.jpg">
+<meta property="article:published_time" content="2026-04-06T02:00:00.000Z">
+<meta property="article:modified_time" content="2026-04-15T17:05:00.000Z">
+<meta property="article:author" content="币圈老秦">
+<meta property="article:tag" content="基础概念">
+<meta property="article:tag" content="智能合约">
+<meta property="article:tag" content="DeFi">
+<meta property="article:tag" content="Solidity">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://geekqin.github.io/img/avatar.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://geekqin.github.io/2026/04/06/smart-contracts/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.12.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.32/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '什么是智能合约？它和传统合约有什么区别？',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2026-04-16 01:05:00'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="币圈老秦's Blog" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">11</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">26</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="币圈老秦's Blog"><span class="site-name">币圈老秦's Blog</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">什么是智能合约？它和传统合约有什么区别？</h1><div id="post-meta"><div class="meta-firstline"></div><div class="meta-secondline"></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>币圈老秦 · 区块链普及系列 第7篇</p>
+<h2 id="什么是智能合约？它和传统合约有什么区别？"><a href="#什么是智能合约？它和传统合约有什么区别？" class="headerlink" title="什么是智能合约？它和传统合约有什么区别？"></a>什么是智能合约？它和传统合约有什么区别？</h2><p>老铁们好！今天咱们来聊聊区块链最重要的应用——智能合约。</p>
+<p>如果说区块链是”账本”，那智能合约就是”自动执行的合同”。没有智能合约，DeFi、NFT、DAO这些东西都不会存在。</p>
+<h3 id="🔍-什么是智能合约？"><a href="#🔍-什么是智能合约？" class="headerlink" title="🔍 什么是智能合约？"></a>🔍 什么是智能合约？</h3><p>智能合约（Smart Contract）是存储在区块链上的程序代码。当预设条件触发时，代码自动执行，不需要任何人工干预。</p>
+<p>💡 简单理解：</p>
+<p>你和朋友打赌比特币涨跌，以前要签合同找见证人。智能合约把赌约写成代码写进区块链，到时间代码自动判断、自动执行，无需任何人干预！</p>
+<h3 id="⚡-智能合约的四大特点"><a href="#⚡-智能合约的四大特点" class="headerlink" title="⚡ 智能合约的四大特点"></a>⚡ 智能合约的四大特点</h3><table>
+<thead>
+<tr>
+<th>特点</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>自动执行</td>
+<td>条件满足就自动执行，无需人工干预</td>
+</tr>
+<tr>
+<td>不可篡改</td>
+<td>部署到链上就不能修改（除非有升级机制）</td>
+</tr>
+<tr>
+<td>透明公开</td>
+<td>代码在链上，任何人都可以查看</td>
+</tr>
+<tr>
+<td>去信任化</td>
+<td>不需要第三方信任，代码就是规则</td>
+</tr>
+</tbody></table>
+<h3 id="📊-智能合约-vs-传统合约"><a href="#📊-智能合约-vs-传统合约" class="headerlink" title="📊 智能合约 vs 传统合约"></a>📊 智能合约 vs 传统合约</h3><table>
+<thead>
+<tr>
+<th>对比项</th>
+<th>传统合约</th>
+<th>智能合约</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>执行方式</td>
+<td>人工执行</td>
+<td>代码自动执行</td>
+</tr>
+<tr>
+<td>信任成本</td>
+<td>需要第三方（律师、公证）</td>
+<td>代码即法律，无需第三方</td>
+</tr>
+<tr>
+<td>篡改风险</td>
+<td>可能被修改、丢失</td>
+<td>不可篡改，永久保存</td>
+</tr>
+<tr>
+<td>执行效率</td>
+<td>慢，需要审批流程</td>
+<td>即时自动，秒级完成</td>
+</tr>
+<tr>
+<td>成本</td>
+<td>律师费、中介费、时间成本</td>
+<td>只需Gas费</td>
+</tr>
+<tr>
+<td>争议处理</td>
+<td>打官司，费时费力</td>
+<td>代码决定，无争议</td>
+</tr>
+</tbody></table>
+<h3 id="🎯-智能合约能做什么？"><a href="#🎯-智能合约能做什么？" class="headerlink" title="🎯 智能合约能做什么？"></a>🎯 智能合约能做什么？</h3><p>智能合约的应用范围非常广：</p>
+<table>
+<thead>
+<tr>
+<th>应用领域</th>
+<th>描述</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>DeFi借贷</td>
+<td>自动放贷、还款、清算</td>
+<td>Aave、Compound</td>
+</tr>
+<tr>
+<td>DEX交易</td>
+<td>去中心化交易所自动撮合</td>
+<td>Uniswap</td>
+</tr>
+<tr>
+<td>NFT铸造</td>
+<td>创建和管理非同质化代币</td>
+<td>BAYC、ERC-721</td>
+</tr>
+<tr>
+<td>DAO治理</td>
+<td>社区投票、资金管理</td>
+<td>MakerDAO</td>
+</tr>
+<tr>
+<td>保险</td>
+<td>自动理赔、条件触发</td>
+<td>Nexus Mutual</td>
+</tr>
+<tr>
+<td>供应链</td>
+<td>商品溯源、自动结算</td>
+<td>IBM Food Trust</td>
+</tr>
+</tbody></table>
+<h3 id="🔧-智能合约是怎么写的？"><a href="#🔧-智能合约是怎么写的？" class="headerlink" title="🔧 智能合约是怎么写的？"></a>🔧 智能合约是怎么写的？</h3><p>以太坊上最常用的智能合约语言是Solidity，它的语法类似JavaScript。</p>
+<ul>
+<li><p>编写代码：开发者用Solidity编写合约逻辑</p>
+</li>
+<li><p>测试：在测试网上模拟运行</p>
+</li>
+<li><p>审计：第三方安全公司审查代码</p>
+</li>
+<li><p>部署：把合约部署到以太坊链上</p>
+</li>
+<li><p>交互：用户通过钱包调用合约功能</p>
+</li>
+</ul>
+<h3 id="⚠️-智能合约的风险"><a href="#⚠️-智能合约的风险" class="headerlink" title="⚠️ 智能合约的风险"></a>⚠️ 智能合约的风险</h3><table>
+<thead>
+<tr>
+<th>风险类型</th>
+<th>描述</th>
+<th>案例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>代码Bug</td>
+<td>智能合约代码有漏洞</td>
+<td>The DAO事件</td>
+</tr>
+<tr>
+<td>黑客攻击</td>
+<td>利用漏洞盗取资金</td>
+<td>Ronin Bridge被盗6亿</td>
+</tr>
+<tr>
+<td>逻辑错误</td>
+<td>合约逻辑设计有问题</td>
+<td>各种Rug Pull</td>
+</tr>
+<tr>
+<td>升级风险</td>
+<td>合约升级可能改变规则</td>
+<td>某些DeFi协议</td>
+</tr>
+</tbody></table>
+<p>⚠️ 老秦的重要提醒：</p>
+<ul>
+<li><p>智能合约虽然牛，但代码bug可能导致资金永久损失</p>
+</li>
+<li><p>投资前一定要看清楚项目方合约是否经过安全审计</p>
+</li>
+<li><p>不要把大量资金放在未经审计的新合约中</p>
+</li>
+<li><p>“代码即法律”既是优势也是风险——一旦出错无法撤回</p>
+</li>
+</ul>
+<h3 id="🌟-智能合约的未来"><a href="#🌟-智能合约的未来" class="headerlink" title="🌟 智能合约的未来"></a>🌟 智能合约的未来</h3><ul>
+<li><p>多链支持：不只是以太坊，Solana、BSC等也支持</p>
+</li>
+<li><p>安全工具：形式化验证、自动审计工具</p>
+</li>
+<li><p>可升级合约：通过代理模式实现合约升级</p>
+</li>
+<li><p>跨链合约：在不同链上互操作</p>
+</li>
+<li><p>AI辅助：AI帮助编写和审计智能合约</p>
+</li>
+</ul>
+<h3 id="📝-总结"><a href="#📝-总结" class="headerlink" title="📝 总结"></a>📝 总结</h3><p>智能合约是区块链2.0的标志，它让”代码即法律”成为可能。</p>
+<p>从DeFi到NFT，从DAO到元宇宙，几乎所有Web3应用都建立在智能合约之上。理解智能合约，就是理解了Web3的基石。</p>
+<p>记住老秦的话：智能合约是”自动执行的合同”，高效但不可逆——写对了是神器，写错了是灾难。</p>
+<p>🔔 关注币圈老秦，每天学点区块链知识！投资有风险，入市需谨慎</p>
+<p>📚 区块链普及系列 第7篇 | 币圈老秦</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://geekqin.github.io">币圈老秦</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://geekqin.github.io/2026/04/06/smart-contracts/">https://geekqin.github.io/2026/04/06/smart-contracts/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://geekqin.github.io" target="_blank">币圈老秦's Blog</a>！</span></div></div><div class="tag_share"><div class="post_share"><div class="social-share" data-image="/img/avatar.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2026/04/06/private-keys/" title="钱包里的私钥到底是什么？丢了会怎样？"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">钱包里的私钥到底是什么？丢了会怎样？</div></div></a></div><div class="next-post pull-right"><a href="/2026/03/21/bitcoin-born/" title="比特币是怎么诞生的？中本聪到底是谁？"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">比特币是怎么诞生的？中本聪到底是谁？</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2026/03/21/bitcoin-born/" title="比特币是怎么诞生的？中本聪到底是谁？"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2026-03-21</div><div class="title">比特币是怎么诞生的？中本聪到底是谁？</div></div></a></div><div><a href="/2026/04/15/blockchain-trilemma/" title="区块链的&quot;不可能三角&quot;到底是什么？"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2026-04-15</div><div class="title">区块链的&quot;不可能三角&quot;到底是什么？</div></div></a></div><div><a href="/2026/03/21/blockchain-basics/" title="区块链到底是什么？一篇文章让你彻底搞懂"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2026-03-21</div><div class="title">区块链到底是什么？一篇文章让你彻底搞懂</div></div></a></div><div><a href="/2026/04/09/blockchain-types/" title="区块链有哪些类型？"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2026-04-09</div><div class="title">区块链有哪些类型？</div></div></a></div><div><a href="/2026/03/21/distributed-ledger/" title="什么是分布式账本？为什么要去中心化？"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2026-03-21</div><div class="title">什么是分布式账本？为什么要去中心化？</div></div></a></div><div><a href="/2026/04/06/consensus-mechanism/" title="什么是共识机制？PoW、PoS到底哪个更强？"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2026-04-06</div><div class="title">什么是共识机制？PoW、PoS到底哪个更强？</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">币圈老秦</div><div class="author-info__description">币圈老秦的个人博客，分享Web3见解与交易心得，个人公众号：币圈老秦，欢迎骚扰！</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">11</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">26</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/GeekQin" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="https://twitter.com/geekqin" target="_blank" title="Twitter"><i class="fab fa-twitter" style="color: #1DA1F2;"></i></a><a class="social-icon" href="javascript:void(0)" target="_blank" title="微信"><i class="fab fa-weixin" style="color: #07C160;"></i></a><a class="social-icon" href="mailto:geekqin@email.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a><a class="social-icon" href="https://partner.hdmune.cn/bg/XJWMF6" target="_blank" title="合约交易"><i class="fab fa-bitcoin" style="color: #F7931A;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%EF%BC%9F%E5%AE%83%E5%92%8C%E4%BC%A0%E7%BB%9F%E5%90%88%E7%BA%A6%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-number">1.</span> <span class="toc-text">什么是智能合约？它和传统合约有什么区别？</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%94%8D-%E4%BB%80%E4%B9%88%E6%98%AF%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%EF%BC%9F"><span class="toc-number">1.1.</span> <span class="toc-text">🔍 什么是智能合约？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E2%9A%A1-%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E7%9A%84%E5%9B%9B%E5%A4%A7%E7%89%B9%E7%82%B9"><span class="toc-number">1.2.</span> <span class="toc-text">⚡ 智能合约的四大特点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%93%8A-%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6-vs-%E4%BC%A0%E7%BB%9F%E5%90%88%E7%BA%A6"><span class="toc-number">1.3.</span> <span class="toc-text">📊 智能合约 vs 传统合约</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%8E%AF-%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E8%83%BD%E5%81%9A%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-number">1.4.</span> <span class="toc-text">🎯 智能合约能做什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%94%A7-%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E6%98%AF%E6%80%8E%E4%B9%88%E5%86%99%E7%9A%84%EF%BC%9F"><span class="toc-number">1.5.</span> <span class="toc-text">🔧 智能合约是怎么写的？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E2%9A%A0%EF%B8%8F-%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E7%9A%84%E9%A3%8E%E9%99%A9"><span class="toc-number">1.6.</span> <span class="toc-text">⚠️ 智能合约的风险</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%8C%9F-%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6%E7%9A%84%E6%9C%AA%E6%9D%A5"><span class="toc-number">1.7.</span> <span class="toc-text">🌟 智能合约的未来</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%93%9D-%E6%80%BB%E7%BB%93"><span class="toc-number">1.8.</span> <span class="toc-text">📝 总结</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/04/16/gas-fees-explained/" title="什么是Gas费用？为什么转账要花钱？">什么是Gas费用？为什么转账要花钱？</a><time datetime="2026-04-16T06:30:00.000Z" title="发表于 2026-04-16 14:30:00">2026-04-16</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/04/15/blockchain-trilemma/" title="区块链的&quot;不可能三角&quot;到底是什么？">区块链的&quot;不可能三角&quot;到底是什么？</a><time datetime="2026-04-15T14:05:00.000Z" title="发表于 2026-04-15 22:05:00">2026-04-15</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/04/10/cz-rise-from-jiangsu-village/" title="从江苏农村到全球最大交易所：CZ的逆袭之路">从江苏农村到全球最大交易所：CZ的逆袭之路</a><time datetime="2026-04-10T03:00:00.000Z" title="发表于 2026-04-10 11:00:00">2026-04-10</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/04/09/blockchain-types/" title="区块链有哪些类型？">区块链有哪些类型？</a><time datetime="2026-04-09T04:47:00.000Z" title="发表于 2026-04-09 12:47:00">2026-04-09</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/04/06/consensus-mechanism/" title="什么是共识机制？PoW、PoS到底哪个更强？">什么是共识机制？PoW、PoS到底哪个更强？</a><time datetime="2026-04-06T02:00:00.000Z" title="发表于 2026-04-06 10:00:00">2026-04-06</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2026 By 币圈老秦</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.12.0"></script><script src="/js/main.js?v=4.12.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.32/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
