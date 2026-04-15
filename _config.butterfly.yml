@@ -1,0 +1,126 @@
+# Site Info
+title: 币圈老秦's Blog
+subtitle: ''
+description: 分享Web3见解与交易心得 | 个人公众号：币圈老秦，欢迎骚扰！
+keywords: Web3,区块链,加密货币,比特币,以太坊
+author: 币圈老秦
+language: zh-CN
+timezone: ''
+
+# URL
+url: https://geekqin.github.io
+root: /
+permalink: :url/
+
+# Avatar
+avatar:
+  img: /img/avatar.jpg
+  effect: false
+
+# Cover
+cover:
+  index_enable: true
+  aside_enable: false
+  archives_enable: false
+  position: both
+  default_cover:
+
+# Social Icons
+social_contact: true
+link_icon:
+  enable: true
+social_icons:
+  enable: true
+  iconLibrary: fab fa-github
+  link_list:
+    github: https://github.com/GeekQin
+    twitter: https://twitter.com/geekqin
+    weixin: javascript:void(0)
+    email: mailto:geekqin@email.com
+
+# Nav Menu
+menu:
+  首页: / || fas fa-home
+  归档: /archives/ || fas fa-archive
+  标签: /tags/ || fas fa-tags
+  分类: /categories/ || fas fa-folder-open
+  关于: /about/ || fas fa-heart
+
+# Footer
+footer:
+  owner:
+    enable: true
+    since: 2026
+  copyright: true
+  framework:
+    enable: true
+    text: Hexo
+  theme:
+    enable: true
+    text: Butterfly
+
+# Busuanzi (visitor count)
+busuanzi:
+  site_uv: true
+  site_pv: true
+  page_pv: false
+
+# Local Search
+local_search:
+  enable: false
+
+# Copy
+copy:
+  enable: true
+  copyright: false
+
+# Highlight
+highlight_theme: default
+
+# FancyBox
+fancybox: true
+
+# Lazyload
+lazyload:
+  enable: false
+
+# Aside
+aside:
+  enable: true
+  hide: false
+  button: true
+  mobile: true
+
+# Card Widget
+card_announcement:
+  enable: true
+  content: This is my Blog
+
+card_recent_post:
+  enable: true
+
+card_categories:
+  enable: true
+
+card_tags:
+  enable: true
+
+card_archives:
+  enable: true
+card_webinfo:
+  enable: true
+
+# Post
+post_meta:
+  date_type: date
+  categories: true
+  tags: true
+
+post_share:
+  enable: false
+
+# Dark Mode
+darkmode:
+  enable: true
+  button: true
+  autoDarkmode: false

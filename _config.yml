@@ -1,7 +1,7 @@
 # Hexo Configuration
-title: 币圈老秦的博客
-subtitle: Web3领域观察者 | 区块链知识普及
-description: 币圈老秦的个人博客，分享区块链知识、交易思考、Web3见解
+title: 币圈老秦's Blog
+subtitle: ''
+description: 币圈老秦的个人博客，分享Web3见解与交易心得，个人公众号：币圈老秦，欢迎骚扰！
 author: 币圈老秦
 language: zh-CN
 timezone: Asia/Shanghai
@@ -32,7 +32,7 @@ theme: butterfly
 deploy:
   type: git
   repo: https://github.com/GeekQin/GeekQin.github.io.git
-  branch: main
+  branch: gh-pages
 
 # Extensions
 plugins:
