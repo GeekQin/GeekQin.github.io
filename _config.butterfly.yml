@@ -8,7 +8,7 @@ menu:
 
 avatar:
   img: /img/avatar.jpg
-  effect: false
+  effect: true
 
 cover:
   index_enable: true
@@ -23,7 +23,7 @@ social:
   fab fa-twitter: https://twitter.com/geekqin || Twitter || '#1DA1F2'
   fab fa-weixin: javascript:void(0) || 微信 || '#07C160'
   fas fa-envelope: mailto:geekqin@email.com || Email || '#4a7dbe'
-  fab fa-bitcoin: https://www.okx.com/cn/ || 合约交易 || '#F7931A' 
+  fab fa-bitcoin: https://partner.hdmune.cn/bg/XJWMF6 || 合约交易 || '#F7931A' 
 
 busuanzi:
   site_uv: true
@@ -50,6 +50,16 @@ card_announcement:
 
 card_recent_post:
   enable: true
+
+post_meta:
+  date_format: relative
+  updated:
+    enable: true
+    date_format: relative
+    relative: true
+
+auto_excerpt:
+  enable: false
 
 darkmode:
   enable: true

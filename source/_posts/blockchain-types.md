@@ -9,6 +9,7 @@ tags:
   - 私链
   - 联盟链
 original_link: https://mp.weixin.qq.com/s/7ybjyu4EZGl7Okp6bx0gLg
+updated: 2026-04-16 00:54:49
 ---
 
 📚 区块链普及系列 第4篇 | 公链、私链、联盟链全面解析
