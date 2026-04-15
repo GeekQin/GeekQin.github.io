@@ -25,13 +25,9 @@ jobs:
 
       - name: Setup butterfly theme
         run: |
-          cp node_modules/hexo-theme-butterfly/package.json themes/butterfly/ 2>/dev/null || true
-          for dir in languages layout scripts source data; do
-            if [ -d "themes/butterfly/$dir" ]; then
-              rm -rf "themes/butterfly/$dir"
-            fi
-            cp -r "node_modules/hexo-theme-butterfly/$dir" "themes/butterfly/" 2>/dev/null || true
-          done
+          rm -rf themes/butterfly
+          ln -s ../node_modules/hexo-theme-butterfly themes/butterfly
+          cp _config.butterfly.yml themes/butterfly/_config.yml
 
       - name: Generate site
         run: npx hexo generate
