@@ -25,6 +25,7 @@ jobs:
 
       - name: Setup butterfly theme
         run: |
+          mkdir -p themes
           rm -rf themes/butterfly
           ln -s ../node_modules/hexo-theme-butterfly themes/butterfly
           cp _config.butterfly.yml themes/butterfly/_config.yml
