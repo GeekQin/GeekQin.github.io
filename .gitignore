@@ -1,0 +1,7 @@
+node_modules/
+db.json
+public/
+.deploy_git/
+.vercel/
+package-lock.json
+themes/butterfly/
