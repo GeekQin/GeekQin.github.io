@@ -53,6 +53,10 @@ card_recent_post:
 
 post_meta:
   date_format: relative
+  page:
+    date_format: relative
+  post:
+    date_format: relative
   updated:
     enable: true
     date_format: relative
@@ -65,3 +69,7 @@ darkmode:
   enable: true
   button: true
   autoDarkmode: false
+
+inject:
+  head:
+  footer:
