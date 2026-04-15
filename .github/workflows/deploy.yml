@@ -23,6 +23,9 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Link butterfly theme
+        run: ln -s ../node_modules/hexo-theme-butterfly themes/butterfly
+
       - name: Generate site
         run: npx hexo generate
 
