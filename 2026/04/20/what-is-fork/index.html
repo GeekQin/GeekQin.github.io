@@ -1,0 +1,241 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>什么是分叉 | 币圈老秦's Blog</title><meta name="author" content="币圈老秦"><meta name="copyright" content="币圈老秦"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="什么是分叉是区块链入门系列的第11篇文章，用通俗语言讲解核心概念。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="什么是分叉">
+<meta property="og:url" content="https://geekqin.github.io/2026/04/20/what-is-fork/index.html">
+<meta property="og:site_name" content="币圈老秦&#39;s Blog">
+<meta property="og:description" content="什么是分叉是区块链入门系列的第11篇文章，用通俗语言讲解核心概念。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://geekqin.github.io/img/avatar.jpg">
+<meta property="article:published_time" content="2026-04-20T02:00:00.000Z">
+<meta property="article:modified_time" content="2026-06-26T08:31:47.455Z">
+<meta property="article:author" content="币圈老秦">
+<meta property="article:tag" content="分叉">
+<meta property="article:tag" content="硬分叉">
+<meta property="article:tag" content="软分叉">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://geekqin.github.io/img/avatar.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://geekqin.github.io/2026/04/20/what-is-fork/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.12.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.32/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '什么是分叉',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2026-06-26 16:31:47'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="币圈老秦's Blog" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">17</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">41</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="币圈老秦's Blog"><span class="site-name">币圈老秦's Blog</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">什么是分叉</h1><div id="post-meta"><div class="meta-firstline"></div><div class="meta-secondline"></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="什么是分叉？硬分叉和软分叉有什么区别？"><a href="#什么是分叉？硬分叉和软分叉有什么区别？" class="headerlink" title="什么是分叉？硬分叉和软分叉有什么区别？"></a>什么是分叉？硬分叉和软分叉有什么区别？</h1><p>区块链普及系列 第11篇 | 币圈老秦</p>
+<p>老铁们好，我是币圈老秦。今天咱们来聊一个特别有意思的话题——分叉。你可能在新闻里听过”比特币又分叉了””以太坊硬分叉”，但到底什么是分叉？硬分叉和软分叉又有什么区别？别急，老秦今天给你掰开了揉碎了讲清楚。</p>
+<h3 id="什么是分叉？"><a href="#什么是分叉？" class="headerlink" title="什么是分叉？"></a>什么是分叉？</h3><p>简单说，分叉就是区块链在某个节点产生了两条不同的链。你可以想象一条公路，走到某个路口突然分成两条，一辆车往左走，一辆车往右走，从此走上了不同的路。</p>
+<p>在区块链里，分叉通常发生在协议升级或者规则变更的时候。当矿工或节点对新规则产生分歧，一部分人升级了，一部分人没有升级，链就分成了两条。</p>
+<blockquote>
+<p>💡 老秦小贴士：分叉本质上是社区对”区块链该怎么发展”产生了分歧。有人想往左，有人想往右，结果路就分成了两条。</p>
+</blockquote>
+<h3 id="硬分叉（Hard-Fork）"><a href="#硬分叉（Hard-Fork）" class="headerlink" title="硬分叉（Hard Fork）"></a>硬分叉（Hard Fork）</h3><p>硬分叉是最”决绝”的分叉方式。新规则和老规则完全不兼容，升级了的新节点拒绝接受旧节点的区块，旧节点也拒绝新节点的区块。结果就是链永久分成了两条。</p>
+<p>打个比方：你的微信突然更新了版本，新版和老版的消息格式不兼容，新版用户发消息老版用户完全看不到，反过来也一样。大家只能各玩各的。</p>
+<h3 id="软分叉（Soft-Fork）"><a href="#软分叉（Soft-Fork）" class="headerlink" title="软分叉（Soft Fork）"></a>软分叉（Soft Fork）</h3><p>软分叉就温和多了。新规则是旧规则的”收紧版”，旧节点仍然可以识别新区块，只是没有新功能。就像是系统出了一个补丁，不打补丁也能用，打了补丁更好用。</p>
+<p>代表案例：比特币的SegWit升级（隔离见证），就是一个经典的软分叉。矿工可以选择升级也可以不升级，不会导致链分裂。</p>
+<h3 id="硬分叉-vs-软分叉对比"><a href="#硬分叉-vs-软分叉对比" class="headerlink" title="硬分叉 vs 软分叉对比"></a>硬分叉 vs 软分叉对比</h3><h3 id="著名的分叉事件"><a href="#著名的分叉事件" class="headerlink" title="著名的分叉事件"></a>著名的分叉事件</h3><p>币圈历史上几次大分叉，每一次都深刻影响了行业走向：</p>
+<blockquote>
+<p>⚠️ 老秦提醒：分叉可能产生”空投糖果”（免费代币），但也可能带来风险。遇到分叉事件，先搞清楚是硬分叉还是软分叉，别一听说分叉就兴奋冲进去。投资需谨慎，别跟我瞎冲！</p>
+</blockquote>
+<h3 id="分叉的意义"><a href="#分叉的意义" class="headerlink" title="分叉的意义"></a>分叉的意义</h3><p>老铁们，分叉不是坏事，它是区块链”进化”的方式。就像生物进化一样，环境变了，物种要么适应变化，要么分化成新的物种。区块链也是通过分叉来适应不断变化的需求和技术进步。</p>
+<p>没有分叉，就没有ETC对”代码即法律”理念的坚持；没有分叉，就没有BCH对”大区块”路线的探索。每一次分叉都是社区在思考：区块链的未来到底该往哪走。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>分叉是区块链升级和社区分歧的产物。硬分叉是不兼容的”大手术”，软分叉是兼容的”小补丁”。理解分叉，你就能理解加密货币世界的很多重大历史事件。</p>
+<p>投资有风险，入市需谨慎。我是币圈老秦，关注我，带你了解更多区块链知识！</p>
+<p>📚 区块链普及系列 第11篇 | 币圈老秦</p>
+<table>
+<thead>
+<tr>
+<th>对比项</th>
+<th>硬分叉</th>
+<th>软分叉</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>兼容性</td>
+<td>新规则与旧规则不兼容</td>
+<td>新规则是旧规则的子集</td>
+</tr>
+<tr>
+<td>是否分裂</td>
+<td>通常会产生两条链</td>
+<td>一般不会分裂</td>
+</tr>
+<tr>
+<td>升级压力</td>
+<td>所有人必须升级</td>
+<td>可以选择不升级</td>
+</tr>
+<tr>
+<td>风险程度</td>
+<td>较高，可能产生新币种</td>
+<td>较低，渐进式升级</td>
+</tr>
+<tr>
+<td>代表案例</td>
+<td>ETH&#x2F;ETC、BTC&#x2F;BCH</td>
+<td>比特币SegWit</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>分叉事件</th>
+<th>时间</th>
+<th>原因</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ETH vs ETC</td>
+<td>2016年</td>
+<td>DAO黑客事件，社区决定回滚交易</td>
+<td>以太坊经典ETC诞生</td>
+</tr>
+<tr>
+<td>BTC vs BCH</td>
+<td>2017年</td>
+<td>区块大小之争（1MB vs 8MB）</td>
+<td>比特币现金BCH诞生</td>
+</tr>
+<tr>
+<td>BCH vs BSV</td>
+<td>2018年</td>
+<td>BCH社区内部分裂</td>
+<td>比特币SV诞生</td>
+</tr>
+</tbody></table>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://geekqin.github.io">币圈老秦</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://geekqin.github.io/2026/04/20/what-is-fork/">https://geekqin.github.io/2026/04/20/what-is-fork/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://geekqin.github.io" target="_blank">币圈老秦's Blog</a>！</span></div></div><div class="tag_share"><div class="post_share"><div class="social-share" data-image="/img/avatar.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2026/04/27/blockchain-history/" title="区块链发展历程"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">区块链发展历程</div></div></a></div><div class="next-post pull-right"><a href="/2026/04/16/gas-fees-explained/" title="什么是Gas费用？为什么转账要花钱？"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">什么是Gas费用？为什么转账要花钱？</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">币圈老秦</div><div class="author-info__description">币圈老秦的个人博客，分享Web3见解与交易心得，个人公众号：币圈老秦，欢迎骚扰！</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">17</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">41</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/GeekQin" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="https://twitter.com/geekqin" target="_blank" title="Twitter"><i class="fab fa-twitter" style="color: #1DA1F2;"></i></a><a class="social-icon" href="javascript:void(0)" target="_blank" title="微信"><i class="fab fa-weixin" style="color: #07C160;"></i></a><a class="social-icon" href="mailto:geekqin@email.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a><a class="social-icon" href="https://partner.hdmune.cn/bg/XJWMF6" target="_blank" title="合约交易"><i class="fab fa-bitcoin" style="color: #F7931A;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E5%88%86%E5%8F%89%EF%BC%9F%E7%A1%AC%E5%88%86%E5%8F%89%E5%92%8C%E8%BD%AF%E5%88%86%E5%8F%89%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="toc-number">1.</span> <span class="toc-text">什么是分叉？硬分叉和软分叉有什么区别？</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E5%88%86%E5%8F%89%EF%BC%9F"><span class="toc-number">1.0.1.</span> <span class="toc-text">什么是分叉？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A1%AC%E5%88%86%E5%8F%89%EF%BC%88Hard-Fork%EF%BC%89"><span class="toc-number">1.0.2.</span> <span class="toc-text">硬分叉（Hard Fork）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BD%AF%E5%88%86%E5%8F%89%EF%BC%88Soft-Fork%EF%BC%89"><span class="toc-number">1.0.3.</span> <span class="toc-text">软分叉（Soft Fork）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A1%AC%E5%88%86%E5%8F%89-vs-%E8%BD%AF%E5%88%86%E5%8F%89%E5%AF%B9%E6%AF%94"><span class="toc-number">1.0.4.</span> <span class="toc-text">硬分叉 vs 软分叉对比</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%91%97%E5%90%8D%E7%9A%84%E5%88%86%E5%8F%89%E4%BA%8B%E4%BB%B6"><span class="toc-number">1.0.5.</span> <span class="toc-text">著名的分叉事件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E5%8F%89%E7%9A%84%E6%84%8F%E4%B9%89"><span class="toc-number">1.0.6.</span> <span class="toc-text">分叉的意义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">1.0.7.</span> <span class="toc-text">总结</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/05/25/cross-chain-bridge/" title="跨链桥">跨链桥</a><time datetime="2026-05-25T02:00:00.000Z" title="发表于 2026-05-25 10:00:00">2026-05-25</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/05/18/layer1-layer2/" title="Layer1和Layer2">Layer1和Layer2</a><time datetime="2026-05-18T02:00:00.000Z" title="发表于 2026-05-18 10:00:00">2026-05-18</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/05/11/zero-knowledge-proof/" title="零知识证明">零知识证明</a><time datetime="2026-05-11T02:00:00.000Z" title="发表于 2026-05-11 10:00:00">2026-05-11</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/05/04/what-is-block/" title="什么是区块">什么是区块</a><time datetime="2026-05-04T02:00:00.000Z" title="发表于 2026-05-04 10:00:00">2026-05-04</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/04/27/blockchain-history/" title="区块链发展历程">区块链发展历程</a><time datetime="2026-04-27T02:00:00.000Z" title="发表于 2026-04-27 10:00:00">2026-04-27</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2026 By 币圈老秦</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.12.0"></script><script src="/js/main.js?v=4.12.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.32/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
